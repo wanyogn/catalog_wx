@@ -1,0 +1,53 @@
+<view class='content_container'>
+  <view class='title'>
+    <view class='title_content'>{{code}} {{name}}</view>
+  </view>
+  <block wx:if="{{code != 'IVD'}}">
+    <block wx:for="{{firstDatas}}" wx:for-item="item">
+      <view class='list_data'>
+        <view class='first_dir' id='{{item.code}}' bindtap='showSecond'>
+          <view class='number'>{{code}}{{item.code}}</view>
+          <view class='name'>{{item.name}}</view>
+          <view class='more'>+</view>
+        </view>
+        <view class='second_dir'>
+          <block wx:if="{{item.code==clickCode && iszk}}">
+            <block wx:for="{{secondData}}" wx:for-item="it">
+              <view class='second_content' id='{{it.second_num}}' bindtap='queryDetail'>
+                <view class='second_number'>{{it.dir_num}}{{it.first_num}}{{it.second_num}}</view>
+                <view class='second_name'>{{it.name}}</view>
+                <view class='second_more'>></view>
+              </view>
+            </block>
+          </block>
+          <block wx:else>
+          </block>
+        </view>
+      </view>
+    </block>
+  </block>
+  <block wx:else>
+    <block wx:for="{{firstDatas}}" wx:for-item="item">
+      <view class='list_data'>
+        <view class='first_dir' id='{{item.code}}' bindtap='showSecond'>
+          <view class='number number_ivd'>{{item.code}}</view>
+          <view class='name name_ivd'>{{item.name}}</view>
+          <view class='more more_ivd'>+</view>
+        </view>
+        <view class='second_dir'>
+          <block wx:if="{{item.code==clickCode && iszk}}">
+            <block wx:for="{{secondData}}" wx:for-item="it">
+              <view class='second_content' id='{{it.second_num}}' bindtap='queryDetail'>
+                <view class='second_number second_number_ivd'>{{it.first_num}}</view>
+                <view class='second_name second_name_ivd'>{{it.name}}</view>
+                <view class='second_more second_more_ivd'>></view>
+              </view>
+            </block>
+          </block>
+          <block wx:else>
+          </block>
+        </view>
+      </view>
+    </block>
+  </block>
+</view>

@@ -1,0 +1,62 @@
+<!--pages/second/second.wxml-->
+<view class='content_container'>
+  <view wx:if="{{dir_num != 'IVD'}}">
+    <view class='title'>
+      <view class='title_content'>{{dir_num}}{{first_num}}{{second_num}} {{second_name}}</view>
+    </view>
+    <block wx:for='{{resultData}}' wx:for-item='item'>
+      <view class='list_result'>
+        <view class='result_decr'>
+          <view class='decr_title'>管理类别:</view>
+          <view class='decr_content'>{{item.management_category}}</view>
+          <view style='clear:both'></view>
+        </view>
+        <view class='result_decr'>
+          <view class='decr_title'>产品描述:</view>
+          <view class='decr_content'>{{item.product_description}}</view>
+          <view style='clear:both'></view>
+        </view>
+        <view class='result_decr'>
+          <view class='decr_title'>预期用途:</view>
+          <view class='decr_content'>{{item.expected_use}}</view>
+          <view style='clear:both'></view>
+        </view>
+        <view class='result_decr'>
+          <view class='decr_title'>品名举例:</view>
+          <view class='decr_content'>
+            <block wx:for='{{item.product_example}}' wx:for-item='i'>
+              <block wx:if='{{i.ecount > 0}}'>
+                <navigator target="miniProgram" open-type="navigate" app-id="wxfa5b20c93499db27" path="pages/search_pro/search_pro?classify=pro&keyword={{i.name}}" extra-data="" version="release">
+                  <text decode='true' space='true' data-text='{{i.name}}' class='exam'>{{i.name}}<text class='x_count'>{{i.ecount}}</text>&nbsp;&nbsp;&nbsp;&nbsp;</text>
+                  </navigator>
+              </block>
+              <block wx:else>
+                <text decode='true' space='true'data-text='{{i}}' class='exam no_exam'>{{i.name}}&nbsp;&nbsp;&nbsp;&nbsp;</text>
+              </block>
+            </block>
+          </view>
+          <view style='clear:both'></view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view wx:else>
+    <view class='title'>
+      <view class='title_content title_content_ivd'>{{first_num}} {{second_name}}</view>
+    </view>
+    <block wx:for='{{resultData}}' wx:for-item='item'>
+      <view class='list_result'>
+        <view class='result_decr'>
+          <view class='decr_title'>管理类别:</view>
+          <view class='decr_content'>{{item.management_category}}</view>
+          <view style='clear:both'></view>
+        </view>
+        <view class='result_decr'>
+          <view class='decr_title'>预期用途:</view>
+          <view class='decr_content'>{{item.expected_use}}</view>
+          <view style='clear:both'></view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

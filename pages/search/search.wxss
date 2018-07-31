@@ -1,0 +1,56 @@
+/* pages/search/search.wxss */
+.content_container{
+  padding: 50rpx;
+}
+.content_title{
+  text-align: center;
+  color: #00c4c6;
+  font-size: 24px;
+}
+/*搜索框 start*/
+.input{
+  margin-top:70rpx;
+  height: 74rpx;
+}
+.input input{
+  border: 1px solid #00c4c6;
+  height: 68rpx;
+  width: 80%;
+  float: left;
+  font-size: 16px;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+  padding:0 20rpx; 
+  color: #00c4c6
+}
+.input .place-holder{
+  font-size: 14px;
+}
+.input button{
+  width: 19%;
+  height: 100%;
+  margin-left: -40rpx;
+  float: left;
+  border: 1px solid #00c4c6;
+  background-color: #00c4c6;
+  color: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+/*搜索框 end*/
+
+.dir_num{
+  width: 100%;
+  height: auto;
+  margin-top: 30rpx;
+}
+.dir_num button{
+  width: 18%;
+  float: left;
+  margin-right: 2.5%;
+  margin-top: 30rpx;
+  color:  #00c4c6;
+}
+.dir_num .last{
+  margin-right: 0;
+}

@@ -1,0 +1,68 @@
+/* pages/first.wxss */
+/*.content_container{
+  padding-top: 50rpx;
+}*/
+.title{
+  width: 100%;
+  height: 100rpx;
+  background-color: #00c4c6
+}
+.title_content{
+  color: #fff;
+  font-size: 16px;
+  /*padding:20rpx 0 20rpx 20rpx;*/
+  padding-left: 20rpx;
+  line-height: 100rpx;
+}
+.first_dir{
+  height: 100rpx; 
+  border-bottom:1px solid #d7d7d7; 
+  padding: 0rpx 20rpx;
+}
+.number,.name{
+  float: left;
+  line-height: 100rpx;
+  font-size: 16px;
+}
+.number{
+  color: #286090
+}
+.name{
+  color: #000;
+  padding-left: 20rpx;
+}
+.more{
+  float: right;
+  line-height: 100rpx;
+  color: #d7d7d7;
+  font-size: 16px;
+}
+.second_content{
+  height: 90rpx; 
+  border-bottom:1px solid #d7d7d7; 
+  padding: 0rpx 20rpx;
+}
+.second_number,.second_name{
+  float: left;
+  line-height: 90rpx;
+  font-size: 16px;
+  color: #00c4c6
+}
+.second_number{
+  color: #00c4c6
+}
+.second_name{
+  color: #00c4c6;
+  padding-left: 20rpx;
+}
+.second_more{
+  float: right;
+  line-height: 90rpx;
+  color: #d7d7d7;
+  font-size: 16px;
+}
+
+/*ivd**/
+.number_ivd,.name_ivd,.more_ivd,.second_number,.second_name,.second_more{
+  font-size: 24rpx;
+}

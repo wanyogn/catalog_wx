@@ -1,0 +1,87 @@
+<view class='content_container'>
+  <view class='header'>
+    <view class='input'>
+      <input type='text' placeholder='请输入关键词，多个词以空格隔开' placeholder-class="place-holder" bindinput='keyInput' value='{{keyword}}'/>
+      <button bindtap='searchKey'><icon type="search" color='#fff'/></button>
+    </view>
+    <view class='search_res'>您搜索的关键词是'<text class='res_key'>{{keyword}}</text>'，共计<text class='res_num'>{{matchCount}}</text>条结果</view>
+  </view>
+  <scroll-view scroll-y style="height: {{showHeight}}px">
+    <block wx:for='{{searchData}}' wx:for-item='item'>
+      <block wx:if="{{item.dir_num != 'IVD'}}">
+        <view class='list_data'>
+          <view class='first_dir' id='{{index}}' bindtap='dirTap'>
+            <view class='number'>{{item.dir_num}}{{item.first_number}}{{item.second_number}}</view>
+            <view class='name'><rich-text nodes='{{item.name}}'></rich-text></view>
+            <view class='more'>+</view>
+          </view>
+          <block wx:if="{{item.isZK}}">
+            <view class='second_dir'>
+              <block wx:for='{{item.data}}' wx:for-item='in'>
+                <view class='list_result'>
+                  <view class='result_decr'>
+                    <view class='decr_title'>管理类别:</view>
+                    <view class='decr_content'>{{in.management_category}}</view>
+                    <view style='clear:both'></view>
+                  </view>
+                  <view class='result_decr'>
+                    <view class='decr_title'>产品描述:</view>
+                    <view class='decr_content'><rich-text nodes='{{in.product_description}}'></rich-text></view>
+                    <view style='clear:both'></view>
+                  </view>
+                  <view class='result_decr'>
+                    <view class='decr_title'>预期用途:</view>
+                    <view class='decr_content'><rich-text nodes='{{in.expected_use}}'></rich-text></view>
+                    <view style='clear:both'></view>
+                  </view>
+                  <view class='result_decr'>
+                    <view class='decr_title'>品名举例:</view>
+                  <!-- <view class='decr_content'><rich-text nodes='{{in.product_example}}'></rich-text></view>-->
+                    <view class='decr_content dec_example'>
+                      <block wx:for='{{in.product_example}}' wx:for-item='it'>
+                        <navigator target="miniProgram" open-type="navigate" app-id="wxfa5b20c93499db27" path="pages/search_pro/search_pro?classify=pro&keyword={{it.old}}" extra-data="" version="release">
+                          <rich-text nodes='{{it.new}}' data-text='{{it.new}}'></rich-text>
+                        </navigator>
+                        <text  space='true' decode='true'>&nbsp;&nbsp;</text>
+                      </block>
+                    </view>
+                    <view style='clear:both'></view>
+                  </view>
+                </view>
+              </block>
+            </view>
+          </block>
+          <block wx:else>
+          </block>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='list_data'>
+          <view class='first_dir' id='{{index}}' bindtap='dirTap'>
+            <view class='number number_ivd'>{{item.first_number}}</view>
+            <view class='name name_ivd'><rich-text nodes='{{item.name}}'></rich-text></view>
+            <view class='more more_ivd'>+</view>
+          </view>
+          <block wx:if="{{item.isZK}}">
+            <view class='second_dir'>
+              <block wx:for='{{item.data}}' wx:for-item='in'>
+                <view class='list_result'>
+                  <view class='result_decr'>
+                    <view class='decr_title'>管理类别:</view>
+                    <view class='decr_content'>{{in.management_category}}</view>
+                    <view style='clear:both'></view>
+                  </view>
+                  <view class='result_decr'>
+                    <view class='decr_title'>预期用途:</view>
+                    <view class='decr_content'><rich-text nodes='{{in.expected_use}}'></rich-text></view>
+                    <view style='clear:both'></view>
+                  </view>
+                </view>
+              </block>
+            </view>
+          </block>
+        </view>
+      </block>
+    </block>
+  </scroll-view>
+</view>

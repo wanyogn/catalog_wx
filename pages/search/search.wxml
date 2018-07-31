@@ -1,0 +1,36 @@
+<view class='content_container'>
+  <view class='content_title'>
+    新版《分类目录》查询
+  </view>
+  
+  <view class='input'>
+    <input type='text' placeholder='请输入关键词，多个词以空格隔开' placeholder-class="place-holder" bindinput='keyInput'/>
+    <button bindtap='searchKey'><icon type="search" color='#fff'/></button>
+  </view>
+  <view class='dir_num'>
+    <button bindtap='clickDir' id='01'>01</button>
+    <button bindtap='clickDir' id='02'>02</button>
+    <button bindtap='clickDir' id='03'>03</button>
+    <button bindtap='clickDir' id='04'>04</button>
+    <button class='last' bindtap='clickDir' id='05'>05</button>
+    <button bindtap='clickDir' id='06'>06</button>
+    <button bindtap='clickDir' id='07'>07</button>
+    <button bindtap='clickDir' id='08'>08</button>
+    <button bindtap='clickDir' id='09'>09</button>
+    <button class='last' bindtap='clickDir' id='10'>10</button>
+    <button bindtap='clickDir' id='11'>11</button>
+    <button bindtap='clickDir' id='12'>12</button>
+    <button bindtap='clickDir' id='13'>13</button>
+    <button bindtap='clickDir' id='14'>14</button>
+    <button class='last' bindtap='clickDir' id='15'>15</button>
+    <button bindtap='clickDir' id='16'>16</button>
+    <button bindtap='clickDir' id='17'>17</button>
+    <button bindtap='clickDir' id='18'>18</button>
+    <button bindtap='clickDir' id='19'>19</button>
+    <button class='last' bindtap='clickDir' id='20'>20</button>
+    <button bindtap='clickDir' id='21'>21</button>
+    <button bindtap='clickDir' id='22'>22</button>
+    <button bindtap='clickDir' id='IVD'>IVD</button>
+    <view style='clear:both'></view>
+  </view>
+</view>

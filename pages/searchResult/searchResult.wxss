@@ -1,0 +1,103 @@
+/*.content_container{
+}*/
+.header{
+  padding: 20rpx 20rpx;
+  height: 150rpx;
+  background-color: #00c4c6;
+  position: relative
+}
+/*搜索框 start*/
+.input{
+  height: 72rpx;
+}
+.input input{
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #00c4c6;
+  height: 68rpx;
+  width: 80%;
+  float: left;
+  font-size: 16px;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+  padding:0 20rpx;
+}
+.input button{
+  width: 19%;
+  height: 100%;
+  margin-left: -40rpx;
+  float: left;
+  border: 1px solid #286090;
+  background-color: #286090;
+  color: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  z-index: 100
+}
+.search_res{
+  font-size: 28rpx;
+  position: absolute;
+  bottom: 20rpx;
+  left: 20rpx;
+}
+.res_key,.res_num{
+  color: #f39800;
+  font-size: 28rpx;
+}
+
+.first_dir{
+  height: 100rpx; 
+  border-bottom:1px solid #d7d7d7; 
+  padding: 0rpx 20rpx;
+}
+.number,.name{
+  float: left;
+  line-height: 100rpx;
+  font-size: 16px;
+}
+.number{
+  color: #286090
+}
+.name{
+  color: #000;
+  padding-left: 20rpx;
+}
+.more{
+  float: right;
+  line-height: 100rpx;
+  color: #d7d7d7;
+  font-size: 16px;
+}
+.list_result{
+  margin: 0 20rpx;
+  height: auto;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #d5d5d5;
+}
+.result_decr{
+  width: 100%;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+.decr_title{
+  width: 20%;
+  float: left;
+  color: #595757;
+  font-size: 24rpx;
+  vertical-align: top
+}
+.decr_content{
+  width: 80%;
+  float: left;
+  color: #898989;
+  font-size: 24rpx;
+  vertical-align: top
+}
+.dec_example rich-text,.dec_example text{
+  color:#0195dd ;
+  float:left;
+  font-size: 24rpx;
+}
+.number_ivd,.name_ivd,.more_ivd{
+  font-size: 24rpx;
+}

@@ -1,0 +1,17 @@
+{
+  "pages":[
+    
+    "pages/search/search",
+    "pages/index/index",
+    "pages/first/first",
+    "pages/second/second",
+    "pages/searchResult/searchResult",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "分类目录查询",
+    "navigationBarTextStyle": "black"
+  }
+}
